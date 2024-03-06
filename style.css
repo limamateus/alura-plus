@@ -1,148 +1,190 @@
-:root{
-    --cor--princial : #ffffff; /* cor principal das fontes*/
-    --cor--secundaria : #C0C0C0; /* cor secundaria das fontes*/
-    --botao: #167BF7; /* cor padrão dos botões*/
-    --cor--fundo: #00030C; /* cor de fundo*/
-    --fonte-principal: 'Inter' /* fonte dos textos*/
-
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter';
+    --botao-azul-efeito: #3c92fa;
 }
 
-*{ /* resente CSS*/
-    margin: 0; 
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
     padding: 0;
 }
-body{
-    background-color: var(--cor--fundo); /* Definindo fundo do body*/
-    color: var(--cor--princial); /* Definindo cor padrão nos texto*/
-    font-size: 1rem ;
-    font-weight: 400;
-    font-family: var(--fonte-principal);
-}
 
-
-.apresentacao{
-    background-image: url("imagens/Background.png");   /* Imagem de fundo que  não tem relevancia no projeto caso não carregue*/
-    background-repeat: no-repeat; /* Defininido para não repitir a imagem */
-    background-size: contain; /* Aqui estou Definindo que a imagem deve pegar todo o espaço do container*/
-  
-}
-
-.apresentacao__principal{
-    height: 100vh; /* Defininido o tamanho*/
-    display: grid; /* Definindo que irei trabalhar com Grid*/
-    grid-template-columns: 50% 50%; /* Definindo que cada grid vai ter um peso de 50%*/
+.principal {
+    background-image: url("imagens/Background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
     align-items: center;
-    text-align: center;    
+    text-align: center;
 }
 
-.apresentacao__principal__caixa{
-    margin: 0 6em;
-}
-.apresentacao__principal__titulo{
-    font-size: 24px;
-    font-weight: 700;
-
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
-.apresentacao__principal__imagem{
-    margin:  1em 0 2em 0;
-}
-.apresentacao__principal__botao{
-    background-color: var(--botao); /* Definindo a cor do botão padrão */
-    border-radius: 0.3rem; /* Definindo a borda da botão que na verdade é um ancora */
-    padding: 1em; /* Definindo um espaçamento */
-    color: var(--cor--princial); /* Cor do Texto*/
-    display:block; /* Definindo como ele ira aparecer*/
-    text-decoration: none; /* Tirando a barra de baixo */
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    display: block;
+    text-decoration: none;
     margin-bottom: 1em;
 }
 
-.botao_secundario{
-    background-color: transparent; /* Alterando para transaparente no segundo botão */
-    border: 0.125rem solid var(--cor--princial) ;  /* Alterando a cor da borda */
-
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal)
 }
 
-.apresentacao__principal__aviso{
-    font-size: 0.5rem;
-    color: var(--cor-secundaria);
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
 }
 
-.apresentacao__secundario{
-    align-items: center;
-    margin: 2em 10em 5em 15em;
-    display: grid; /* Definindo que irei trabalhar com Grid*/
-    grid-template-columns: 50% 50%; /* Definindo que cada grid vai ter um peso de 50%*/
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
 }
 
-.apresentacao__secundario__imagem{
+.container__imagem {
+    margin: 1em 0 2em 0;
+}
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+.secundario__imagem {
     width: 80%;
 }
 
-.apresentacao__secundario__titulo{
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo {
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 48px;
     color: var(--branco-principal);
     margin-bottom: 0.1em;
 }
 
-.apresentacao__secundario__descricao{
+.descricao__texto {
     color: var(--cinza-secundario);
-    margin-bottom: 1em;
-    margin-right: 3rem;
-    font-size: 1.0rem;
 }
 
-
-.botao_secundario_secundario{
+.secundario__botao {
     display: inline-block;
-}
-
-
-.apresentacao__dispositivos{
-    text-align: center;
-}
-
-
-.apresentacao__dispositivos__titulo{ 
-  font-size: 3rem;
-  color: var(--branco-principal);
-}
-
-.apresentacao__dispositivos__lista{
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-}
-.apresentacao__dispositivos__texto{
-    font-size: rem;
-    color: var(--cinza-secundario);
-}
-
-.rodape{
-    margin: 5em 3em;
-    text-align: center;
-   
-   
-}
-
-.rodape__lista{
-    display: flex;
-    justify-content: center;
     margin-top: 1em;
-    list-style-type: none;
-    text-decoration: none;
-   
-  
 }
-.lista__link a{    
+
+.container__descricao {
+    padding: 2em;
+}
+
+.dispositivos__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.lista__link a{
     text-decoration: none;
     color: var(--branco-principal);
-    margin-left: 1em;         
+    margin-left: 1em;
 }
 
-.rodape__texto{
+.rodape__texto {
     margin: 1em 0;
-    color: var(--cor--secundaria);   
+    color: var(--cinza-secundario);
     font-size: 14px;
+}
+
+.lista__link a:hover {
+    color: var(--botao-azul);
+}
+
+.lista__link a:active {
+    color: purple;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
+
+@media screen and (max-width: 768px) {
+
+    .container{      
+        display: block;
+        background-image: none;       
+
+    }
+   
+
+    .container__imagem{
+        width: 50vh;
+    }
+
+    .container__caixa{
+        margin: 2em 2em;
+    }
+
+    .secundario{      
+         margin: 0;
+        text-align: center;
+    }
+    .secundario__imagem{
+        width: 40vh;
+       
+    }
+
+    .dispositivos__lista{
+        display: block;
+    }
+
+    .rodape__lista{
+        display: block;
+    }
 }
